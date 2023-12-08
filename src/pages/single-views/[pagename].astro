@@ -1,0 +1,22 @@
+---
+export async function getStaticPaths() {
+    const url = "https://eqchkvjopeqebfwbmvay.supabase.co/rest/v1/ninaroende";
+    const options = {
+    method: "GET",
+    headers: {
+        apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVxY2hrdmpvcGVxZWJmd2JtdmF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDE4NzIxMTksImV4cCI6MjAxNzQ0ODExOX0.O2_NQhUNI9HIpTCIUfmjA-0sTTdDlV9B_WtqGsaBY_I"
+    },
+}
+  const data = await fetch(url, options).then(response => response.json());
+
+  return data.map((speaker) => {
+    return {
+      params: { sidenavn: speaker.slug },
+      props: { speaker },
+    };
+  });
+}
+
+const { speaker } = Astro.props;
+---
