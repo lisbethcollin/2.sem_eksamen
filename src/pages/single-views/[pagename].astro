@@ -1,22 +1,71 @@
 ---
 export async function getStaticPaths() {
-    const url = "https://eqchkvjopeqebfwbmvay.supabase.co/rest/v1/ninaroende";
-    const options = {
-    method: "GET",
-    headers: {
-        apikey:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVxY2hrdmpvcGVxZWJmd2JtdmF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDE4NzIxMTksImV4cCI6MjAxNzQ0ODExOX0.O2_NQhUNI9HIpTCIUfmjA-0sTTdDlV9B_WtqGsaBY_I"
-    },
-}
-  const data = await fetch(url, options).then(response => response.json());
+  const data = await fetch("https://eqchkvjopeqebfwbmvay.supabase.co/rest/v1/ninaroende",
+    {
+        method: "GET",
+        headers: {
+            apikey:
+                "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVxY2hrdmpvcGVxZWJmd2JtdmF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDE4NzIxMTksImV4cCI6MjAxNzQ0ODExOX0.O2_NQhUNI9HIpTCIUfmjA-0sTTdDlV9B_WtqGsaBY_I"
+        },
+    }).then(response => response.json());
 
-  return data.map((speaker) => {
+  return data.map((smykke) => {
     return {
-      params: { sidenavn: speaker.slug },
-      props: { speaker },
+      params: { pagename: smykke.slug },
+      props: { myData: smykke },
     };
   });
 }
 
-const { speaker } = Astro.props;
+const { myData } = Astro.props;
+console.log(myData);
+import MainLayout from "../../layouts/MainLayout.astro";
 ---
+
+<MainLayout title={myData.name}>
+    <section id="breadcrumb">
+        <a href="index.astro"></a>
+
+    </section>
+    
+    <h1>{myData.name}</h1>
+    
+    <section id="categories">
+
+    </section>
+    <section>
+        <article>
+            <img src={"/smykker_webp/" + myData.small_img} alt="">
+            <img src={"/smykker_webp/" + myData.big_img} alt="">
+        </article>
+        <article>
+            <h2>{myData.name} </h2>
+            <p>{myData.short_des} </p>
+            <p>{myData.price},00 kr.</p>
+            <br><br>
+            <h3>Materiale</h3>
+            <p>{myData.material_des}</p>
+            <img src="" alt="sustain_icon">
+            <button>Læg i kurv</button>
+        </article>
+        <article>
+            <img src={"/kvinder_webp/" + myData.lady_img} alt="">
+            <img src={"/webp_texture/" + myData.vibe_img} alt="">
+        </article>
+        <article>
+            <h2>Beskrivelse og inspiration</h2>
+            <p>{myData.long_des}</p>
+            <p>{myData.lady_des} </p>
+        </article>
+        <article>
+            <h2>Andre kiggede også på...</h2>
+            <section class="grid_view_more">
+                <div>
+                    <img src="" alt="">
+                    navn på smykket
+                    prisen
+                </div>
+            </section>
+        </article>
+    </section>
+</MainLayout>

@@ -3,8 +3,8 @@ const { data } = Astro.props;
 ---
 <a href=`/single-views/${data.slug}`>
     <article>
-        <img src={"/imgs/speakers/" + data.img} alt="">
+        <img src={"/smykker_webp/" + data.small_img} alt="">
         <h4>{data.name}</h4>
-        <h7>{data.employment}</h7>
+        <p>{data.short_des}</p>
     </article>
 </a>
