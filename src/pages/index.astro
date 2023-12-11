@@ -1,10 +1,11 @@
 ---
+import Carousel from "../components/Carousel.astro";
 import MainLayout from "../layouts/MainLayout.astro"
 ---
 
 <MainLayout>
 	<h1>Bliv inspireret...</h1>
-	<h2>Håndlavet - Autentisk - Organisk</h2>
+	<p>Håndlavet - Autentisk - Organisk</p>
 	<section>
 		<article>
 			<img src="" alt="">
@@ -27,6 +28,67 @@ import MainLayout from "../layouts/MainLayout.astro"
 	</section>
 	<section>
 		<h3>Det der er vigtigt for dig og mig...</h3>
-		
+		<section class="carousel_3">
+			<article>
+				<img src="/icons/tree.svg" alt="tree">
+				<p>Du planter et træ i Danmark hver gang du køber et smykke</p>
+			</article>
+			<article>
+				<img src="/icons/heart.svg" alt="heart">
+				<p>Håndlavet med kærlighed så du får den bedste kvalitet</p>
+			</article>
+			<article>
+				<img src="/icons/fragt.svg" alt="fragt">
+				<p>Gratis og hurtig fragt i hele Danmark</p>
+			</article>
+		</section>
 	</section>
+	<section>
+		<section class="carousel_2">
+			<article>
+				<img src="/smykker_webp/penelope_ross_store_02.webp" alt="penelope rosse">
+				<p>Penelope Rosse øreringe - 1200,00 kr.</p>
+			</article>
+			<article>
+				<img src="/smykker_webp/elizabeth_leveson_blue_02.webp" alt="elizabeth leveson">
+				<p>Elizabeth Leveson armbånd - 1300,00 kr.</p>
+			</article>
+		</section>
+		<section>
+			<h3>En klassisk favorit</h3>
+			<p>Armbåndet lægger sig organisk om dit håndled. Placeringen for enderne af de blå iolitter underbygger kulørens intensitet. Kurverne er kreeret i hånden, hvilket giver hvert unikke smykke sit eget skulpturelle udtryk.</p>
+			<button>Læg i kurv</button>
+		</section>
+	</section>
+	<h2>Besøg min butik</h2>
+	<section>
+		<h4>Adresse</h4>
+		<p></p>
+	</section>
+	<img src="" alt="">
+	
+
 </MainLayout>
+
+<style>
+	.carousel_3 {
+		display: grid;
+		grid-template-columns: 100% 100% 100%;
+		max-width: 100%;
+		overflow: scroll;
+	}
+	.carousel_2 {
+		display: grid;
+		grid-template-columns: 100% 100%;
+		max-width: 100%;
+		overflow: scroll;
+	}
+	.carousel_3 article{
+		display: grid;
+		place-items: center;
+	}
+
+	@media (min-width: 767px){
+
+}
+</style>
