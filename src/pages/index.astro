@@ -9,19 +9,19 @@ import MainLayout from "../layouts/MainLayout.astro"
 		<article>
 			<img src="" alt="">
 			<div>
-				<p>Maria Eutokia guldarmbånd med rubin - 11.500 kr.</p>
+				<h8>Maria Eutokia guldarmbånd med rubin - 11.500 kr.</h8>
 			</div>
 		</article>
 		<article>
 			<img src="" alt="">
 			<div>
-				<p>Maria Eutokia øreringe - 11.500 kr.</p>
+				<h8>Maria Eutokia guldarmbånd med rubin - 11.500 kr.</h8>
 			</div>
 		</article>
 		<article>
 			<img src="" alt="">
 			<div>
-				<p>Maria Eutokia ring - 11.500 kr.</p>
+				<h8>Maria Eutokia guldarmbånd med rubin - 11.500 kr.</h8>
 			</div>
 		</article>
 	</section>
@@ -44,29 +44,69 @@ import MainLayout from "../layouts/MainLayout.astro"
 	</section>
 	<section>
 		<section class="carousel_2">
-			<article>
-				<img src="/smykker_webp/penelope_ross_store_02.webp" alt="penelope rosse">
-				<p>Penelope Rosse øreringe - 1200,00 kr.</p>
-			</article>
-			<article>
-				<img src="/smykker_webp/elizabeth_leveson_blue_02.webp" alt="elizabeth leveson">
-				<p>Elizabeth Leveson armbånd - 1300,00 kr.</p>
-			</article>
+			<img src="/smykker_webp/penelope_ross_store_02.webp" alt="penelope rosse">
+			<img src="/smykker_webp/penelope_ross_store_01.webp" alt="penelope rosse">
 		</section>
+		<h8>Penelope Rosse øreringe - 1200,00 kr.</h8>
 		<section>
-			<h3>En klassisk favorit</h3>
+			<h2>En klassisk favorit</h2>
 			<p>Armbåndet lægger sig organisk om dit håndled. Placeringen for enderne af de blå iolitter underbygger kulørens intensitet. Kurverne er kreeret i hånden, hvilket giver hvert unikke smykke sit eget skulpturelle udtryk.</p>
 			<button>Læg i kurv</button>
 		</section>
 	</section>
-	<h2>Besøg min butik</h2>
 	<section>
-		<h4>Adresse</h4>
-		<p></p>
+		<h2>Besøg min butik</h2>
+		<h7>Adresse</h7>
+		<p>Store Kannikestræde 5 1169 <br>
+			København K</p>
+		<img src="" alt="">
+		<h7>Åbningstider</h7>
+		<article class="openingshours">
+			<p>Mandag - Lørdag:</p>
+			<p>11:00 - 17:30</p>
+			<p>Søndag 3/12:</p>
+			<p>Lukket</p>
+			<p>Søndag 10/12, 17/12:</p>
+			<p>11:00 - 16:00</p>
+			<p>Lørdag 23/12:</p>
+			<p>11:00 - 15:00</p>
+			<p>24/12 - 1/1:</p>
+			<p>Lukket</p>
+		</article>
 	</section>
-	<img src="" alt="">
-	
-
+	<section>
+		<h2>Tak for jeres kærlighed</h2>
+		<hr>
+		<section class="carousel_3">
+			<article>
+				<h4>Anne Zimmer</h4>
+				<p>Smukke, smukke smykker, fantastisk stemningsfuldt lokale og super betjening. Det kunne ikke være bedre!</p>
+				<img src="" alt="">
+			</article>
+			<article>
+				<h4>Anne Mette</h4>
+				<p>Jeg er VILD med smykkerne fra Nina Rønde og er tilbagevende kunde gennem mange år - både i butikken ved Rundetårn og online. Altid super god og personlig service - og smykkerne er unikke og i en god kvalitet. Største anbefaling herfra.</p>
+				<img src="" alt="">
+			</article>
+			<article>
+				<h4>Karina Andersen</h4>
+				<p>Hurtig levering og så får man plantet et træ for hvert smykke man køber :-)</p>
+				<img src="" alt="">
+			</article>
+		</section>
+	</section>
+	<section>
+		<section class="carousel_4">
+			<img src="" alt="">
+			<img src="" alt="">
+			<img src="" alt="">
+			<img src="" alt="">
+		</section>
+		<article>
+			<h3>Følg med på min instagram....</h3>
+			<h5>Se med og få inspiration til dig selv eller til gave</h5>
+		</article>
+	</section>
 </MainLayout>
 
 <style>
@@ -82,11 +122,21 @@ import MainLayout from "../layouts/MainLayout.astro"
 		max-width: 100%;
 		overflow: scroll;
 	}
+	.carousel_4 {
+		display: grid;
+		grid-template-columns: 100% 100% 100% 100%;
+		max-width: 100%;
+		overflow: scroll;
+	}
 	.carousel_3 article{
 		display: grid;
 		place-items: center;
 	}
 
+.openingshours{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
 	@media (min-width: 767px){
 
 }
