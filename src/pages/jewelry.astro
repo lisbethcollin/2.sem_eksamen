@@ -11,4 +11,28 @@ const data = await fetch(
 ).then((res) => res.json());
 
 console.log(data);
+import MainLayout from "../layouts/MainLayout.astro"
+import Card from "../components/Card.astro";
 ---
+
+<MainLayout>
+    <section id="breadcrumb">
+        <a href="index.astro"></a>
+
+    </section>
+    <h1>Alle smykker</h1>
+    <section id="categories">
+
+    </section>
+    <section id="filtering">
+
+    </section>
+    <section>
+        {
+          data.map((thing) => {
+            return <Card data={thing} />;
+          })
+        }
+      </section>
+      <button>Indlæs flere</button>
+</MainLayout>
