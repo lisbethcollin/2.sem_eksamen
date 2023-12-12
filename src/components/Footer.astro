@@ -1,8 +1,13 @@
-<section class="container">  
-    <h2>Tilmeld dig nyhedsbrevet</h2>
-    <p>Følg med når der kommer nyheder og få 10% rabat på dit første køb</p>
-    <p>din email...</p>
-    <button>Tilmeld</button>
+<section class="container grid_1_1"> 
+    <article class="nyhedbrevet">
+        <h2>Tilmeld dig nyhedsbrevet</h2>
+        <p>Følg med når der kommer nyheder og få 10% rabat på dit første køb</p>
+    </article>
+
+    <article>
+        <p>din email...</p>
+        <button>Tilmeld</button>
+    </article> 
 </section>
 
 <section class="bund grid_1_1_1">
@@ -24,35 +29,60 @@
 
     <article>
         <h3>Kontakt</h3>
+        <article class="web">
+        <p>Nina Rønde Jewelry</p>
+        <p>info@ninaroende.dk </p>
+        <p>+45 26 15 11 58 – kun i</p>
+        <p>butikkens åbningstid</p>
+    
+        <p>Nina Rønde Jewelry Store</p>
+        <p>Kannikestræde 5 1169</p>
+        <p>København K</p>
+        </article>   
     </article>
         
     <article>
         <h3>Information</h3>
+        <article class="web">
         <p>FAQ</p>
         <p>Forsendelsesinformation</p>
         <p>Vilkår og betingelser</p>
-        <p></p>
+        <p>Gavekort</p>
+        </article>
     </article>
+
+    <article class="order_3">
         <h3>Sociale medier</h3>
         <img src="/svg/instagram.svg" alt="instagram">
         <img src="/svg/facebook.svg" alt="faecbook">
+    </article>
 
+    <article class="order_2">
         <h3>Samarbejdspartnere</h3>
         <img src="/icons/klimatra.webp" alt="sertificat">
         <img src="/icons/growingtree.webp" alt="sertificat">
+    </article>
 
+    <article class="order_1">
         <h6>NINA RØNDE Jewelry</h6>
         <p>© 2023 Ninaroende.dk. All Rights Reserved</p>
         <p>CVR-nr. 25283309</p>
-    </section>
+    </article>
+
+</section>
 
 <style>
+    .web {
+        display: none; /* Skjul elementet på mobil */
+    }
     .container{
         background-image: url('/svg/footer_sten2.webp'); 
         background-size: cover;
         position: relative;
         text-align: center;
         color: white;
+         padding-top: 20px;
+         padding-bottom: 40px;
     }     
     .bund{
         background-color: #6A5A4B;
@@ -66,14 +96,37 @@
         border: none; /* Fjern kantlinje */
         cursor: pointer; /* Gør cursor til en pegefinger ved hover */
     }
+
+    
     @media screen and (min-width: 768px){
+        .web {
+            display: block; /* Vis elementet på desktop og større skærme */
+        }
+
+        .container{
+           padding-top: 100px;
+           padding-bottom: 50px;  
+        }
         .container, .bund{
             text-align: left;
         }
-
+        .grid_1_1{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
         .grid_1_1_1{
              display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+             grid-template-columns: 1fr 1fr 1fr;
         }
+
+        .order_3{
+            order: 3;/* her giver jeg placering i mit grid til mit element med en class, så den sidder andeledes på web*/
+        }
+
+        .order_2{
+            order: 2;
+
+        }
+
     }
 </style>
