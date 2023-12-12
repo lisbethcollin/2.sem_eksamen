@@ -5,8 +5,10 @@ import MainLayout from "../layouts/MainLayout.astro"
 <MainLayout>
 <section class="grid_2-1">
 	<section>
-		<h1>Bliv inspireret...</h1>
-		<p>Håndlavet - Autentisk - Organisk</p>
+		<article>
+			<h1>Bliv inspireret...</h1>
+			<p>Håndlavet - Autentisk - Organisk</p>
+		</article>
 		<article>
 			<img src="" alt="">
 			<div>
@@ -51,7 +53,7 @@ import MainLayout from "../layouts/MainLayout.astro"
 	<section>
 		<section class="carousel_2">
 			<img src="/smykker_webp/penelope_ross_store_02.webp" alt="penelope rosse">
-			<img src="/smykker_webp/penelope_ross_store_m.webp" alt="penelope rosse" class="mobile">
+			<img src="/smykker_webp/penelope_ross_store_01_m.webp" alt="penelope rosse" class="mobile">
 			<img src="/smykker_webp/penelope_ross_store_01.webp" alt="penelope rosse" class="desktop">
 		</section>
 		<h8>Penelope Rosse øreringe - 1200,00 kr.</h8>
@@ -117,16 +119,14 @@ import MainLayout from "../layouts/MainLayout.astro"
 </MainLayout>
 
 <style>
-	.grid_2-1{
-		display: grid;
-		grid-template-columns: 2fr 1fr;
-	}
+
 	#icon_carousel {
 		display: grid;
 		grid-template-columns: 100% 0 100% 0 100%;
 		max-width: 100%;
 		overflow: scroll;
-	}.carousel_3 {
+	}
+	.carousel_3 {
 		display: grid;
 		grid-template-columns: 100% 100% 100%;
 		max-width: 100%;
@@ -159,6 +159,9 @@ import MainLayout from "../layouts/MainLayout.astro"
 	grid-template-columns: 1fr 1fr;
 }
 	@media (min-width: 767px){
-
+		.grid_2-1{
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+	}
 }
 </style>
