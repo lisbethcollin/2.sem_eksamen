@@ -54,7 +54,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <img src={"/webp_texture/" + myData.vibe_img} id="vibe_img" alt={myData.name}>
         </article>
         <article class="des_box">
-            <h2 class="beskrivelse">Beskrivelse og inspiration</h2>
+            <h2>Beskrivelse og inspiration</h2>
             <p id="long_des">{myData.long_des}</p>
             <p>{myData.lady_des}</p>
         </article>
@@ -121,15 +121,16 @@ button {
 }
 .container{
     position: relative;
+    display: flex;
+  justify-content: flex-end;
 }
 #vibe_img {
-    float: right;
     width: 80%;
 }
 #lady_img {
     position: absolute;
     z-index: 1;
-    transform: translate(0%,40%);
+    transform: translate(-100%,50%);
     width: 50%;
 }
 .grid_1-2 {
@@ -138,9 +139,6 @@ button {
 #long_des{
         margin-top: 10%;
     }
-.beskrivelse {
-    margin-top: -10%;
-}
 @media (min-width: 760px) {
     h2 {
         font-size: var(--font-size-xl);
@@ -171,11 +169,6 @@ button {
     #big_img{
         width: 350px;
 }
-    #lady_img {
-        position: absolute;
-        z-index: 1;
-        transform: translate(10%,50%);
-    }
     .mobile_box{
         margin: 0;
         padding: 0;
