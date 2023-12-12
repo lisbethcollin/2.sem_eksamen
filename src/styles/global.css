@@ -14,7 +14,8 @@
   --trans-color: rgba(70, 69, 97, 0.65);
 
   /* Typografi */
-  --font-size-xxl: 3.5rem; /* size 56 */
+  --font-size-xxxl: 3.5rem; /* size 56 */
+  --font-size-xxl: 3rem; /* size 48 */
   --font-size-xl: 2.5rem; /* size 40 */
   --font-size-l: 2rem; /* size 32 */
   --font-size-m: 1.5rem; /* size 24 */
@@ -63,4 +64,6 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+h1 {
 }
