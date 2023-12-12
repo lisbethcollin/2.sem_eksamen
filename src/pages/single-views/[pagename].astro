@@ -34,9 +34,9 @@ import MainLayout from "../../layouts/MainLayout.astro";
 
     </section>
     <section>
-        <article>
-            <img src={"/smykker_webp/" + myData.small_img} alt="">
-            <img src={"/smykker_webp/" + myData.big_img} alt="">
+        <article class="container">
+            <img src={"/smykker_webp/" + myData.small_img} id="top_img" alt={myData.name}>
+            <img src={"/smykker_webp/" + myData.big_img} id="big_img" alt={myData.name}>
         </article>
         <article>
             <h2>{myData.name} </h2>
@@ -48,14 +48,14 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <img src="" alt="sustain_icon">
             <button>Læg i kurv</button>
         </article>
-        <article>
-            <img src={"/kvinder_webp/" + myData.lady_img} alt="">
-            <img src={"/webp_texture/" + myData.vibe_img} alt="">
+        <article class="container">
+            <img src={"/kvinder_webp/" + myData.lady_img} id="lady_img" alt={myData.name}>
+            <img src={"/webp_texture/" + myData.vibe_img} alt={myData.name}>
         </article>
         <article>
             <h2>Beskrivelse og inspiration</h2>
             <p>{myData.long_des}</p>
-            <p>{myData.lady_des} </p>
+            <p>{myData.lady_des}</p>
         </article>
         <article>
             <h2>Andre kiggede også på...</h2>
@@ -69,3 +69,23 @@ import MainLayout from "../../layouts/MainLayout.astro";
         </article>
     </section>
 </MainLayout>
+
+<style>
+.container {
+    position: relative;
+}
+#top_img {
+    position: absolute;
+    z-index: 1;
+    transform: translate(170%,35%);
+}
+#lady_img {
+    position: absolute;
+    z-index: 1;
+    transform: translate(170%,35%);
+}
+#big_img{
+    margin-left: 5%;
+}
+
+</style>
