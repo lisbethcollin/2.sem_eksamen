@@ -27,9 +27,9 @@
   --font-weight-semibold: 600;
   --font-weight-normal: 100;
 
-  --font-family-header: "Italiana";
-  --font-family-text: judson;
-  --font-family-subtitle: yeseva one;
+  --font-family-header: "Italiana", sans-serif;
+  --font-family-text: "Judson", serif;
+  --font-family-subtitle: "Yeseva One", serif;
 
   /* Spacing */
   --space-xxxs: 0.25rem;
