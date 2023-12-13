@@ -78,6 +78,7 @@ import Card from "../components/Card.astro";
   gap: 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
+ 
 }
 /*** knappen i bunder med indlæs flere */
 .see_more {
@@ -191,7 +192,8 @@ text-align: left;
 }
 .grid_1-1{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  
 }
 
 }

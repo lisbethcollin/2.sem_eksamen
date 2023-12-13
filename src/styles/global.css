@@ -10,7 +10,7 @@
   --textbox-color: #faf4f0;
   --button-color: #faf4f0;
   --background-color: #cab49b;
-  --hover-color: #f8ef21;
+  --hover-color: #3c82a0;
   --trans-color: rgba(70, 69, 97, 0.65);
 
   /* Typografi */
@@ -56,6 +56,7 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
+  max-width: 1200px;
 }
 body {
   color: var(--text-color);
