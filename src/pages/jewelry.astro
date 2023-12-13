@@ -76,15 +76,20 @@ import Card from "../components/Card.astro";
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 /*** knappen i bunder med indlæs flere */
 .see_more {
     background-color: var(--text-color);
-    padding: 10px 80px;
+    padding: 10px 70px;
     color: var(--text-color-white);
     margin-top: 3rem;
     margin-bottom: 3rem;
     border: none;
+    font-family: var( --font-family-text);
+    font-size: var(--font-size-s);
+  
  /*** får knappen til at sidde i midten */
     margin-left: auto;
     margin-right: auto;
@@ -97,8 +102,8 @@ import Card from "../components/Card.astro";
     display: flex;
 	overflow-y: auto;
   gap: 1rem;
-  padding: 1rem;
-  
+  padding: 1rem;  
+  margin-top: 1rem;
 }
 
 
@@ -171,4 +176,23 @@ text-align: left;
   display: block;
 }
 
+@media (min-width: 760px) {
+
+  #carousel{
+    display: none;
+  }
+#filtering{
+  display: flex;
+  justify-content: left;
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.grid_1-1{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+}
 </style>
