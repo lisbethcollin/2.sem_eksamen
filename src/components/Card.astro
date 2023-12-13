@@ -4,7 +4,7 @@ const { data } = Astro.props;
 <a href=`/single-views/${data.slug}`>
     <article>
         <img src={"/smykker_webp/" + data.small_img} alt="">
-        <h4 class= h_tekst>{data.name}</h4>
+        <h4>{data.name}</h4>
         <p>{data.short_des}</p>
     </article>
 </a>
@@ -14,24 +14,19 @@ const { data } = Astro.props;
     p{
 font-family: var(  --font-family-text);
 
+
     }
-.h_tekst{
-font-family: var(  --font-family-subtitle)
-}
+
     h4{
 font-family: var(  --font-family-subtitle);
+font-weight: 200;
     }
     
     a{
         text-decoration:none;
         color:var(  --text-color);
-         display: flex;
-    flex-direction: column;
-  
-
-    margin-bottom: 3rem;
-    text-decoration: none; 
-    
+        max-width:230px;
+        
 }
 
 

@@ -20,6 +20,19 @@ import Card from "../components/Card.astro";
 
     </section>
     <h1>Alle smykker</h1>
+     <section class="kategorier">
+
+           <a href="#">Alle</a>
+             <a href="#">Nyheder</a>
+             <a href="#">Bestsellers</a>
+           <a href="#">Øreringe</a>
+           <a href="#">Halskæder</a>
+           <a href="#">Armbånd</a>
+           <a href="#">Ringe</a>
+           <a href="#">Gavekort</a>
+            
+        </section>
+    <hr>
     <section id="carousel">
       <button>Alle</button>
       <button>Nyheder</button>
@@ -69,6 +82,22 @@ import Card from "../components/Card.astro";
   /*** får overskriften til at sidde midten */
   h1{
     text-align: center;
+    font-weight: 200;
+  }
+
+     a{
+        text-decoration:none;
+        color:var(  --text-color);
+        
+}
+  /* linjen i web **/
+  hr{
+    color:var(--text-color);
+    
+  }
+
+  .kategorier{
+display: none;
   }
 
   /*** grid til produkterne i listevisning*/
@@ -145,7 +174,7 @@ padding-left: 15px;
   border: none;
   cursor: pointer;
   border-radius: 0.7rem;
-min-width: 7rem;
+min-width: 9rem;
 text-align: left;
  
 }
@@ -176,6 +205,8 @@ text-align: left;
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+/****grid listeview mellemstørrelse skærm */
 @media (min-width: 500px) {
 .grid_1-1{
   display: grid;
@@ -193,19 +224,40 @@ text-align: left;
   #carousel{
     display: none;
   }
-#filtering{
+/*** hele containeren med filter og sorter knappen i web */
+  #filtering{
   display: flex;
   justify-content: left;
   gap: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
+ background-color: transparent;
 }
+
+/*** grid til produkterne i listevisning i web*/
 .grid_1-1{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
 }
 
+.kategorier{
+display: flex;
+justify-content: center;
+gap: 3rem;
+margin-top: 2.5rem;
+margin-bottom: 1rem;
+
+}
+
+}
+/** skjuler linjen i mobil */
+@media (max-width: 760px) {
+hr{
+  display: none;
+}
 }
 </style>
