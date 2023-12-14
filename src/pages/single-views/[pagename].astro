@@ -59,13 +59,22 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <p>{myData.lady_des}</p>
         </article>
     </section>
-        <article>
-            <h2>Andre kiggede også på...</h2>
+        <article class="andre_kigger">
+            <h2 class="overskrift_andre">Andre kiggede også på...</h2>
             <section class="grid_view_more">
-                <div>
-                    <img src="" alt="">
-                    navn på smykket
-                    prisen
+                <div class="carousel">
+                    <img src="/smykker_webp/ada_lovelace_01.webp" alt="halskæde ada">
+                    <h3>navn på smykket</h4>
+                    <p>prisen</p>
+                       <img src="/smykker_webp/ada_lovelace_01.webp" alt="halskæde ada">
+                    <h3>navn på smykket</h4>
+                    <p>prisen</p>
+                       <img src="/smykker_webp/ada_lovelace_01.webp" alt="halskæde ada">
+                   <h3>navn på smykket</h4>
+                    <p>prisen</p>
+                       <img src="/smykker_webp/ada_lovelace_01.webp" alt="halskæde ada">
+                    <h3>navn på smykket</h4>
+                    <p>prisen</p>
                 </div>
             </section>
         </article>
@@ -85,12 +94,14 @@ import MainLayout from "../../layouts/MainLayout.astro";
 }
 h2, h3{
     font-family: var(--font-family-header);
+    font-weight: 100;
 }
 h2 {
     font-size: var(--font-size-l);
 }
 h3, button {
     font-size: var(--font-size-m);
+    font-weight: 100;
 }
 p {
     font-size: var(--font-size-s);
@@ -139,6 +150,13 @@ button {
 #long_des{
         margin-top: 10%;
     }
+.andre_kigger{
+    background-color: var(--box-color);
+}
+.overskrift_andre h2{
+    text-align: center;
+}
+    
 @media (min-width: 760px) {
     h2 {
         font-size: var(--font-size-xl);
