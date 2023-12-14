@@ -9,7 +9,10 @@ import "../styles/global.css";
     </article>
 <img class="web" src="/svg/arrow.svg" alt="pil">
     <article>
-        <p class="din_mail">din email...</p>
+      <!--   Kode til at lave email indput -->
+     <!--    <label for="email">din mail:</label>
+        <input type="email" id="email" name="email"> -->
+    <p class="din_mail">din email...</p>
         <hr>
         <button>Tilmeld</button>
     </article> 
@@ -154,6 +157,13 @@ import "../styles/global.css";
         display: block;
         width: 13rem;
     }
+
+    input{
+        /*styling af email input*/
+      border: none; /* Fjern kantlinje */  
+      padding: 10px 10px;
+      
+    }
     @media screen and (min-width: 768px){
         .web {
             display: block; /* Vis elementet på desktop og større skærme */
@@ -178,6 +188,7 @@ import "../styles/global.css";
             /*her er grid til den brune footer*/
              display: grid;
              grid-template-columns: 1fr 1fr 1fr;
+             gap: 2rem;
        
         }
         .openingshours{
