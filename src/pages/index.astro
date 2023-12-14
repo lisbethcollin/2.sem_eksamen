@@ -5,35 +5,35 @@ import MainLayout from "../layouts/MainLayout.astro"
 <MainLayout>
 <section class="grid_2-1">
 	<section>
-		<article>
+		<article class="img_grid">
 			<h1>Bliv inspireret...</h1>
 			<p>Håndlavet - Autentisk - Organisk</p>
 		</article>
 		<article>
-			<img src="" alt="">
+			<img src="/img/jewelry_forside.webp"alt="">
 			<div>
-				<h8>Maria Eutokia guldarmbånd med rubin - 11.500 kr.</h8>
+				<h8 class="img_tekst">Maria Eutokia guldarmbånd med rubin - 11.500 kr.</h8>
 			</div>
 		</article>
 	</section>
-	<section>
+	<section class="img_grid">
 		<article>
-			<img src="" alt="">
+			<img src="/img/bracelet_forside.webp" alt="">
 			<div>
-				<h8>Maria Eutokia guldarmbånd med rubin - 11.500 kr.</h8>
+				<h8 class="img_tekst" >Maria Eutokia guldarmbånd med rubin - 11.500 kr.</h8>
 			</div>
 		</article>
 		<article>
-			<img src="" alt="">
+			<img src="/img/earrings_forside.webp" alt="">
 			<div>
-				<h8>Maria Eutokia guldarmbånd med rubin - 11.500 kr.</h8>
+				<h8 class="img_tekst" >Maria Eutokia guldarmbånd med rubin - 11.500 kr.</h8>
 			</div>
 		</article>
 	</section>
 </section>
 	<section class="box">
 		<h3>Det der er vigtigt for dig og mig...</h3>
-		<section id="icon_carousel">
+		<section class="carousel">
 			<article>
 				<img src="/icons/tree.svg" alt="tree">
 				<p>Du planter et træ i Danmark hver gang du køber et smykke</p>
@@ -51,7 +51,7 @@ import MainLayout from "../layouts/MainLayout.astro"
 		</section>
 	</section>
 	<section>
-		<section class="carousel_2">
+		<section class="carousel">
 			<img src="/smykker_webp/penelope_ross_store_02.webp" alt="penelope rosse">
 			<img src="/smykker_webp/penelope_ross_store_01_m.webp" alt="penelope rosse" class="mobile">
 			<img src="/smykker_webp/penelope_ross_store_01.webp" alt="penelope rosse" class="desktop">
@@ -68,7 +68,7 @@ import MainLayout from "../layouts/MainLayout.astro"
 		<h7>Adresse</h7>
 		<p>Store Kannikestræde 5 1169 <br>
 			København K</p>
-		<img src="" alt="">
+		<img src="/img/butikken_forside.webp" alt="">
 		<h7>Åbningstider</h7>
 		<article class="openingshours">
 			<p>Mandag - Lørdag:</p>
@@ -86,7 +86,7 @@ import MainLayout from "../layouts/MainLayout.astro"
 	<section class="box">
 		<h2>Tak for jeres kærlighed</h2>
 		<hr>
-		<section class="carousel_3">
+		<section class="carousel">
 			<article>
 				<h4>Anne Zimmer</h4>
 				<p>Smukke, smukke smykker, fantastisk stemningsfuldt lokale og super betjening. Det kunne ikke være bedre!</p>
@@ -105,7 +105,7 @@ import MainLayout from "../layouts/MainLayout.astro"
 		</section>
 	</section>
 	<section>
-		<section class="carousel_4">
+		<section class="carousel">
 			<img src="" alt="">
 			<img src="" alt="">
 			<img src="" alt="">
@@ -120,27 +120,29 @@ import MainLayout from "../layouts/MainLayout.astro"
 
 <style>
 
-	#icon_carousel {
-		display: grid;
-		grid-template-columns: 100% 0 100% 0 100%;
-		max-width: 100%;
-		overflow: scroll;
+	.carousel {
+	    display: flex;
+	overflow-y: auto;
 	}
-	.carousel_3 {
-		display: grid;
-		grid-template-columns: 100% 100% 100%;
-		max-width: 100%;
-		overflow: scroll;
-	}
+
 	.vl{
 		border-left: 2px solid var(--text-color);
   		height: 150px;
 		margin-top: 26px;
 	}
+
+/** 
+		.carousel_3 {
+		display: grid;
+		grid-template-columns: 100% 100% 100%;
+		max-width: 100%;
+		overflow: scroll;
+	}
 	.carousel_3 article, #icon_carousel article{
 		display: grid;
 		place-items: center;
 	}
+
 	.carousel_2 {
 		display: grid;
 		grid-template-columns: 100% 100%;
@@ -153,15 +155,36 @@ import MainLayout from "../layouts/MainLayout.astro"
 		max-width: 100%;
 		overflow: scroll;
 	}
-
+	*/
+.img_tekst{
+	display: flex;
+	justify-content: flex-end;
+	background-color: var( --box-color);
+	padding: 4px;
+}
 .openingshours{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
-	@media (min-width: 767px){
+	@media (min-width: 760px){
 		.grid_2-1{
 		display: grid;
 		grid-template-columns: 2fr 1fr;
+		margin-left: 1rem;
+		margin-right: 1rem;
+		gap: 1rem;
+		margin-bottom: 3rem;
+	}
+	.img_grid1{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+	}
+
+		.img_grid1{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
 	}
 }
 </style>
