@@ -59,26 +59,37 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <p>{myData.lady_des}</p>
         </article>
     </section>
+
         <article class="andre_kigger">
             <h2 class="overskrift_andre">Andre kiggede også på...</h2>
-            <section class="grid_view_more">
-                <div class="carousel">
-                    <img src="/smykker_webp/ada_lovelace_01.webp" alt="halskæde ada">
-                    <h3>navn på smykket</h4>
-                    <p>prisen</p>
-                       <img src="/smykker_webp/ada_lovelace_01.webp" alt="halskæde ada">
-                    <h3>navn på smykket</h4>
-                    <p>prisen</p>
-                       <img src="/smykker_webp/ada_lovelace_01.webp" alt="halskæde ada">
-                   <h3>navn på smykket</h4>
-                    <p>prisen</p>
-                       <img src="/smykker_webp/ada_lovelace_01.webp" alt="halskæde ada">
-                    <h3>navn på smykket</h4>
-                    <p>prisen</p>
-                </div>
+            <section class="grid_view_more carousel">
+                
+                    <div class="card_size">
+                        <img src="/smykker_webp/ada_lovelace_01.webp" alt="halskæde ada lovelace">
+                        <h3>Ada Lovelace</h3>
+                        <p>3500,00 kr.</p>
+                    </div>
+             
+                    <div class="card_size">
+                        <img src="/smykker_webp/ann_pitt_01.webp" alt="halskæde ann pitt">
+                        <h3>Ann Pitt</h3>
+                        <p>950,00 kr.</p>
+                   </div>
+
+                   <div class="card_size">
+                       <img src="/smykker_webp/annie_oakley_01.webp" alt="armbånd annie oakley">
+                        <h3>Annie Oakley</h3>
+                        <p>1200,00 kr.</p>
+                    </div>
+                   
+                    <div class="card_size">
+                       <img src="/smykker_webp/countess_palatine_01.webp" alt="øreringe countess palatine">
+                        <h3>Countess Palatine</h3>
+                        <p>850,00 kr.</p>
+                    </div>
+               
             </section>
         </article>
-    </section>
 </MainLayout>
 
 <style>
@@ -88,6 +99,8 @@ import MainLayout from "../../layouts/MainLayout.astro";
 /* img{
    min-width: 100%;
 } */
+
+
 .carousel {
     display: flex;
 	overflow-y: auto;
@@ -150,14 +163,38 @@ button {
 #long_des{
         margin-top: 10%;
     }
+
+/************** styling af section med Andre kigger på *************************/
 .andre_kigger{
     background-color: var(--box-color);
+    background-size: cover;
+    padding: 20px;
 }
-.overskrift_andre h2{
+
+.andre_kigger h3{
+    font-size: var(--font-size-xs);
+}
+.andre_kigger p{
+    font-size: var(--font-size-xs);
+    color:  #593921;
+}
+.overskrift_andre{
     text-align: center;
+    margin: 5px;
 }
+
+.card_size{
+    /*her giver jeg en mindste størrelse til billederne med tekst i andre kigger på.. */
+    min-width: 150px;
     
+}
+    .grid_view_more{
+        /*her giver jeg display flex som lægger elementerne på ræjke*/
+        display: flex;
+        gap: 2rem;
+    }
 @media (min-width: 760px) {
+    /***************** her under styler vi web *************************/
     h2 {
         font-size: var(--font-size-xl);
     }
@@ -213,6 +250,11 @@ button {
     }
     #lady_img, #vibe_img{
         width: auto;
+    }
+    .grid_view_more{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;   
     }
 }
 </style>
