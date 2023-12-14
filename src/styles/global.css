@@ -49,13 +49,14 @@
 }
 html {
   background-color: var(--background-color);
-}
-main {
-  margin: auto;
   background-image: url(/public/svg/background.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
+}
+main {
+  margin: auto;
+
   max-width: 1200px;
 }
 body {
