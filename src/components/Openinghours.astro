@@ -1,16 +1,18 @@
 <article class="butik_mobil">
-<section>
+<section class="grid_mobil">
          <div>
 		    <h2>Besøg min butik</h2>
 		</div>
 
-		<div>
+		<div class="adress_mobil">
 			<h5>Adresse</h5>
 			<p>Store Kannikestræde 5 1169 <br>
 			København K</p>
 	    </div>
 
-
+        <div>  
+             <img class="line_mobil" src="/svg/h_line.svg" alt="">
+        </div>
 		
         <div class="grid_1">
          
@@ -108,6 +110,8 @@ h2{
 /***** viser mobil versionen */
 .butik_mobil{
     display: block;
+    margin-bottom:3rem;
+    margin-top:3rem;
 }
 /****** skjuler desktop versionen */
 .butik_web{
@@ -117,12 +121,50 @@ h2{
 .grid_1-1{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    place-items:center;
 
+}
+.grid_mobil{
+
+display:grid;
+justify-content: content;
 }
 
 .grid_1{
-    display: grid;
-    grid-template-rows: 1fr 1fr
+    display: flex;
+    flex-direction: column;
+}
+.line_mobil{
+    display: flex;
+justify-content:center;
+    margin-top:2rem;
+    margin-bottom: 2rem;
+}
+h2{
+	font-family: var(--font-family-header);
+	font-size: var(--font-size-xxl);
+	text-align: center;
+	font-weight: 200;
+    margin-bottom: 2rem;
+}
+
+ h5{
+font-family: var(--font-family-subtitle);
+font-weight: 200;
+font-size: var(--font-size-s);
+padding-bottom:1rem;
+text-align:center;
+}
+
+
+p{
+font-family: var( --font-family-text);
+font-size: var( --font-size-s);
+font-weight: 200;
+
+}
+.adress_mobil{
+    text-align:center;
 }
 
 
@@ -214,6 +256,7 @@ font-family: var(--font-family-subtitle);
 font-weight: 200;
 font-size: var(--font-size-m);
 padding-bottom:1rem;
+
 }
 
 
