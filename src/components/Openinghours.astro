@@ -10,8 +10,8 @@
 			København K</p>
 	    </div>
 
-        <div>  
-             <img class="line_mobil" src="/svg/h_line.svg" alt="">
+        <div class="centered-content">  
+             <img class="line_mobil" src="/svg/h_line.svg" alt="line">
         </div>
 		
         <div class="grid_1">
@@ -50,7 +50,7 @@
 <section class="grid_web">
 
     <div>
-		    <img class="butik_img" src="/img/butikken_forside.webp" alt="">
+		    <img class="butik_img" src="/img/butikken_forside.webp" alt="butik">
     </div>
 	
     <div class="grid_1">
@@ -78,7 +78,7 @@
             </div>
 
             <div class="line">
-		    <img class="line_img" src="/svg/line.svg" alt="">
+		    <img class="line_img" src="/svg/line.svg" alt="line">
             </div>
 
 		    <div class="tider">
@@ -135,10 +135,12 @@ justify-content: content;
     flex-direction: column;
 }
 .line_mobil{
-    display: flex;
-justify-content:center;
     margin-top:2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem;  
+}
+.centered-content{
+     text-align: center;
+    
 }
 h2{
 	font-family: var(--font-family-header);
