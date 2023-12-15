@@ -24,16 +24,19 @@ import "../styles/global.css";
             <div class="line"></div>
         </div>
     </nav>
+    
         <article class="logo">
             <a href="/../index.html">
                 <img src="/svg/logo_mobile.svg" id="mobile" alt="Logo">
                 <img src="/svg/logo.svg" id="desk" alt="Logo desktop">
             </a>
         </article>
+     
         <article id="icons">
             <img src="/svg/newsletter.svg" alt="newsletter">
             <img src="/svg/kurv.svg" alt="læg i kurv">
         </article>
+      
     
 </header>
 
@@ -64,11 +67,16 @@ import "../styles/global.css";
     display: none;
 }
 header {
-    display: flex;
-   
+    display: grid;
     align-items: center;
     padding: 20px;
+    grid-template-columns: 2fr 1fr 2fr;
 
+
+}
+#icons{
+    display: flex;
+justify-content: flex-end;
 }
 
 nav {
@@ -131,10 +139,9 @@ hr{
     background-color: var(--textbox-color);
     padding: 5px 0 ;
 }
-#icons{
-    display: flex;
-    
-}
+
+
+
 
 
 
@@ -156,13 +163,12 @@ hr{
         display: flex;
         justify-content: flex-start;
         justify-content: left;
-        margin-left: -25%;
+        margin-left: -15%;
     }
     header {
         display: flex;
         align-items: center;
         justify-content:space-between;
-        
         border-bottom: none;
         margin-bottom:3rem;
     
@@ -210,6 +216,7 @@ hr{
         border: 1px solid var(--text-color);
         margin: 5px 20px 20px 30px;
     }
+
 }
 @media screen and (max-width: 320px){
     section p {
@@ -232,7 +239,6 @@ hr{
     .logo{
         margin-left: 0;
     }
-
-
+ 
 }
 </style>
