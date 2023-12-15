@@ -1,0 +1,167 @@
+<article class="butik_mobil">
+<section>
+         <div>
+		    <h2>Besøg min butik</h2>
+		</div>
+
+		<div>
+			<h7>Adresse</h7>
+			<p>Store Kannikestræde 5 1169 <br>
+			København K</p>
+	    </div>
+
+
+		
+        <div class="grid_1">
+         
+			<h7>Åbningstider</h7>
+           
+            <div class="grid_1-1">
+
+            <div>
+			<p>Mandag - Lørdag:</p>
+			<p>Søndag 3/12:</p>
+			<p>Søndag 10/12, 17/12:</p>
+			<p>Lørdag 23/12:</p>
+			<p>24/12 - 1/1:</p>
+		    </div>
+	
+
+		    <div>
+			<p>11:00 - 17:30</p>
+			<p>Lukket</p>
+			<p>11:00 - 16:00</p>
+			<p>11:00 - 15:00</p>
+			<p>Lukket</p>
+            </div>
+
+            </div>
+
+        </div>
+
+</section>
+</article>
+
+
+
+<article class="butik_web">
+<section class="grid_web">
+
+    <div>
+		    <img class="butik_img" src="/img/butikken_forside.webp" alt="">
+    </div>
+	
+    <div class="grid_1">
+
+        <div>
+		    <h2>Besøg min butik</h2>
+		</div>
+
+		<div class="grid_1-1-1">
+            <div class="adresse_web">
+
+			<h7>Adresse</h7>
+			<p>Store Kannikestræde 5 1169 <br>
+			København K</p>
+		
+			<h7>Åbningstider</h7>
+
+			<p>Mandag - Lørdag:</p>
+			<p>Søndag 3/12:</p>
+			<p>Søndag 10/12, 17/12:</p>
+			<p>Lørdag 23/12:</p>
+			<p>24/12 - 1/1:</p>
+
+            </div>
+		
+
+            <div>
+
+		    <img src="/svg/line.svg" alt="">
+
+            </div>
+
+		    <div class="tider">
+			<p>11:00 - 17:30</p>
+			
+			<p>Lukket</p>
+			
+			<p>11:00 - 16:00</p>
+			
+			<p>11:00 - 15:00</p>
+	
+			<p>Lukket</p>
+            </div>
+
+         </div>
+
+    </div>
+
+</section>
+</article>
+
+
+<style>
+
+h2{
+	font-family: var(--font-family-header);
+	font-size: var(--font-size-xl);
+	text-align: center;
+	font-weight: 200;
+	
+}
+
+.butik_mobil{
+    display: block;
+}
+
+.butik_web{
+    display: none;
+}
+
+.grid_1-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.grid_1{
+    display: grid;
+    grid-template-rows: 1fr 1fr
+}
+
+
+	@media (min-width: 760px){
+
+.butik_mobil{
+display: none;
+}
+
+.butik_web{
+    display: block;
+}
+
+.grid_web{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid_1{
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.grid_1-1-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.adresse_web{
+    display: flex;
+    justify-content: space-around;
+}
+.tider{
+    display: flex;
+    justify-content: flex-end;
+}
+    }
+</style>
