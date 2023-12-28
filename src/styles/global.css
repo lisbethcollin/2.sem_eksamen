@@ -10,7 +10,7 @@
   --textbox-color: #faf4f0;
   --button-color: #faf4f0;
   --background-color: #cab49b;
-  --hover-color: #f8ef21;
+  --hover-color: #3c82a0;
   --trans-color: rgba(70, 69, 97, 0.65);
 
   /* Typografi */
@@ -25,10 +25,11 @@
 
   --font-weight-bold: 700;
   --font-weight-semibold: 600;
+  --font-weight-normal: 100;
 
-  --font-family-header: "Italiana";
-  --font-family-text: judson;
-  --font-family-subtitle: yeseva one;
+  --font-family-header: "Italiana", sans-serif;
+  --font-family-text: "Judson", serif;
+  --font-family-subtitle: "Yeseva One", serif;
 
   /* Spacing */
   --space-xxxs: 0.25rem;
@@ -48,17 +49,23 @@
 }
 html {
   background-color: var(--background-color);
-}
-main {
-  margin: auto;
   background-image: url(/public/svg/background.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
 }
+main {
+  margin: auto;
+
+  max-width: 1200px;
+}
 body {
   color: var(--text-color);
   font-family: var(--font-family-text);
+  font-weight: 100;
+}
+footer {
+  font-weight: 100;
 }
 img {
   max-width: 100%;
