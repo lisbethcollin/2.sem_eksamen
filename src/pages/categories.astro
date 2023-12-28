@@ -1,6 +1,6 @@
 ---
 const data = await fetch(
-    "https://eqchkvjopeqebfwbmvay.supabase.co/rest/v1/ninaroende", 
+    "https://eqchkvjopeqebfwbmvay.supabase.co/rest/v1/ninaroende?type=eq.", 
     {
         method: "GET",
         headers: {
@@ -9,13 +9,12 @@ const data = await fetch(
         },
     }
 ).then((res) => res.json());
-console.log(data.type)
 
 import MainLayout from "../layouts/MainLayout.astro"
 import Card from "../components/Card.astro";
 ---
 
-<MainLayout title="Shop">
+<MainLayout>
     <section id="breadcrumb">
         <a href="index.astro"></a>
 
@@ -26,7 +25,7 @@ import Card from "../components/Card.astro";
            <a href="#">Alle</a>
              <a href="#">Nyheder</a>
              <a href="#">Bestsellers</a>
-           <a href=`/categories/${data.type}`>Øreringe</a>
+           <a href="#">Øreringe</a>
            <a href="#">Halskæder</a>
            <a href="#">Armbånd</a>
            <a href="#">Ringe</a>
@@ -38,25 +37,25 @@ import Card from "../components/Card.astro";
       <button>Alle</button>
       <button>Nyheder</button>
       <button>Bestsellers</button>
-      <button>Øreringe</button>
-      <button>Halskæder</button>
-      <button>Armbånd</button>
-      <button>Ringe</button>
-      <button>Gavekort</button>
+<button>Øreringe</button>
+<button>Halskæder</button>
+<button>Armbånd</button>
+<button>Ringe</button>
+<button>Gavekort</button>
 
     </section>
     <section id="filtering">
-      <div class="dropdown">
-        <button class="dropbtn">Filter</button>
-        <div class="dropdown-content">
-          <a href="#">Guldsmykker</a>
-          <a href="#">Sølvsmykker</a>
-          <a href="#">Uden sten</a>
-          <a href="#">Med sten</a>
-          <a href="#">Hænge øreringe</a>
-          <a href="#"> Stikker Øreringe</a>
-        </div>
-      </div>
+<div class="dropdown">
+  <button class="dropbtn">Filter</button>
+  <div class="dropdown-content">
+    <a href="#">Guldsmykker</a>
+    <a href="#">Sølvsmykker</a>
+    <a href="#">Uden sten</a>
+     <a href="#">Med sten</a>
+      <a href="#">Hænge øreringe</a>
+         <a href="#"> Stikker Øreringe</a>
+  </div>
+</div>
 <div class="dropdown">
   <button class="dropbtn">Sorter</button>
   <div class="dropdown-content">  
@@ -84,14 +83,12 @@ import Card from "../components/Card.astro";
   h1{
     text-align: center;
     font-weight: 200;
-     font-size: var(--font-size-xxxl);
   }
 
-     a{
-        text-decoration:none;
-        color:var(  --text-color);
-        
-}
+  a{
+    text-decoration:none;
+    color:var(  --text-color);
+  }
   /* linjen i web **/
   hr{
     color:var(--text-color);
@@ -244,7 +241,6 @@ text-align: left;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
-  justify-items: center;
 }
 
 .kategorier{
@@ -254,9 +250,6 @@ gap: 3rem;
 margin-top: 2.5rem;
 margin-bottom: 1rem;
 
-}
-h1{
-      font-size: var(--font-size-xxxl);
 }
 
 }
