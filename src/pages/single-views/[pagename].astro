@@ -27,35 +27,38 @@ import MainLayout from "../../layouts/MainLayout.astro";
 
     </section>
     
-    <h1>{myData.name}</h1>
-    
     <section id="categories">
 
     </section>
     <section>
-        <article class="container">
+        <section class="grid_1-1">
+        <article class="carousel">
             <img src={"/smykker_webp/" + myData.small_img} id="top_img" alt={myData.name}>
+            <img src={"/smykker_webp/" + myData.small_img_mobile} id="top_img_m" alt={myData.name}>
             <img src={"/smykker_webp/" + myData.big_img} id="big_img" alt={myData.name}>
         </article>
-        <article>
+        <article class="mobile_box">
             <h2>{myData.name} </h2>
             <p>{myData.short_des} </p>
-            <p>{myData.price},00 kr.</p>
+            <p id="price">{myData.price},00 kr.</p>
             <br><br>
             <h3>Materiale</h3>
             <p>{myData.material_des}</p>
             <img src="" alt="sustain_icon">
             <button>Læg i kurv</button>
         </article>
+    </section>
+    <section class="grid_1-2">
         <article class="container">
             <img src={"/kvinder_webp/" + myData.lady_img} id="lady_img" alt={myData.name}>
-            <img src={"/webp_texture/" + myData.vibe_img} alt={myData.name}>
+            <img src={"/webp_texture/" + myData.vibe_img} id="vibe_img" alt={myData.name}>
         </article>
-        <article>
+        <article class="des_box">
             <h2>Beskrivelse og inspiration</h2>
-            <p>{myData.long_des}</p>
+            <p id="long_des">{myData.long_des}</p>
             <p>{myData.lady_des}</p>
         </article>
+    </section>
         <article>
             <h2>Andre kiggede også på...</h2>
             <section class="grid_view_more">
@@ -70,21 +73,128 @@ import MainLayout from "../../layouts/MainLayout.astro";
 </MainLayout>
 
 <style>
-.container {
-    position: relative;
-}
 #top_img {
-    position: absolute;
-    z-index: 1;
-    transform: translate(170%,35%);
+    display: none;
+}
+/* img{
+   min-width: 100%;
+} */
+.carousel {
+    display: flex;
+	overflow-y: auto;
+}
+h2, h3{
+    font-family: var(--font-family-header);
+}
+h2 {
+    font-size: var(--font-size-l);
+}
+h3, button {
+    font-size: var(--font-size-m);
+}
+p {
+    font-size: var(--font-size-s);
+    color: var(--text-color-subtitle);
+    margin: 2% 0;
+}
+button {
+    background-color: var(--text-color);
+    padding: 10px 80px;
+    color: var(--text-color-white);
+    place-items: center;
+    margin-top: 25%;
+}
+.mobile_box{
+    display: grid;
+    margin: 5%;
+    padding: 5%;
+    background-color: var(--box-color);
+}
+.des_box{
+    padding: 5%;
+    background-color: var(--box-color);
+}
+#price{
+    font-size: var(--font-size-m);
+    color: var(--text-color);
+    padding-bottom: 15%;
+}
+.container{
+    position: relative;
+    display: flex;
+  justify-content: flex-end;
+}
+#vibe_img {
+    width: 80%;
 }
 #lady_img {
     position: absolute;
     z-index: 1;
-    transform: translate(170%,35%);
+    transform: translate(-100%,50%);
+    width: 50%;
 }
-#big_img{
-    margin-left: 5%;
+.grid_1-2 {
+    margin: 5%;
 }
-
+#long_des{
+        margin-top: 10%;
+    }
+@media (min-width: 760px) {
+    h2 {
+        font-size: var(--font-size-xl);
+    }
+    h3 {
+        font-size: var(--font-size-l);
+    }
+    #price {
+        font-size: var(--font-size-m);
+    }
+    .carousel {
+        display: block;
+        position: relative;
+    }
+    img{
+        height: auto;
+    }
+    #top_img {
+        display: block;
+        width: auto;
+        position: absolute;
+        z-index: 1;
+        transform: translate(145%,35%);
+    }
+    #top_img_m {
+        display: none;
+    }
+    #big_img{
+        width: 350px;
+}
+    .mobile_box{
+        margin: 0;
+        padding: 0;
+        background-color: none;
+    }
+    .grid_1-1{
+        display: grid;
+        grid-template-columns: auto 0.6fr;
+        background-color: var(--box-color);
+        padding: 3rem;
+        margin: 3rem;
+        gap: 2%;
+    } 
+    .grid_1-2{
+        display: grid;
+        grid-template-columns: 0.8fr auto;
+        background-color: var(--box-color);
+        padding: 3rem;
+        margin: 3rem;
+        gap: 2%;
+    }
+    .container{
+        order: 1;
+    }
+    #lady_img, #vibe_img{
+        width: auto;
+    }
+}
 </style>

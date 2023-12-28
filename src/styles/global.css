@@ -14,7 +14,8 @@
   --trans-color: rgba(70, 69, 97, 0.65);
 
   /* Typografi */
-  --font-size-xxl: 3.5rem; /* size 56 */
+  --font-size-xxxl: 3.5rem; /* size 56 */
+  --font-size-xxl: 3rem; /* size 48 */
   --font-size-xl: 2.5rem; /* size 40 */
   --font-size-l: 2rem; /* size 32 */
   --font-size-m: 1.5rem; /* size 24 */
@@ -25,7 +26,7 @@
   --font-weight-bold: 700;
   --font-weight-semibold: 600;
 
-  --font-family-header: italiana;
+  --font-family-header: "Italiana";
   --font-family-text: judson;
   --font-family-subtitle: yeseva one;
 
@@ -49,7 +50,6 @@ html {
   background-color: var(--background-color);
 }
 main {
-  height: 100%;
   margin: auto;
   background-image: url(/public/svg/background.svg);
   background-size: cover;
@@ -63,4 +63,11 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+h1 {
+  font-size: var(--font-size-xl);
+  font-family: var(--font-family-header);
+}
+body::-webkit-scrollbar {
+  display: none; /* fjerner scrollbaren for Chrome, Safari, and Opera */
 }
